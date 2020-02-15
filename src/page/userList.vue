@@ -11,18 +11,18 @@
                   width="100">
                 </el-table-column>
                 <el-table-column
-                  property="registe_time"
-                  label="注册日期"
+                  property="userCode"
+                  label="用户编码"
                   width="220">
                 </el-table-column>
                 <el-table-column
-                  property="username"
+                  property="userName"
                   label="用户姓名"
                   width="220">
                 </el-table-column>
                 <el-table-column
-                  property="city"
-                  label="注册地址">
+                  property="registe_time"
+                  label="注册时间">
                 </el-table-column>
             </el-table>
             <div class="Pagination" style="text-align: left;margin-top: 10px;">
@@ -69,7 +69,8 @@
     		headTop,
     	},
         created(){
-            this.initData();
+            // this.initData();
+            this.getUsers();
         },
         methods: {
             async initData(){
@@ -98,11 +99,12 @@
                 this.tableData = [];
                 Users.forEach(item => {
                     const tableData = {};
-                    tableData.username = item.username;
-                    tableData.registe_time = item.registe_time;
-                    tableData.city = item.city;
+                    tableData.userName = item.userName;
+                    tableData.registe_time = item.meta.createAt;
+                    tableData.userCode = item.userCode;
                     this.tableData.push(tableData);
                 })
+                // console.log(this.tableData)
             }
         },
     }

@@ -173,7 +173,8 @@
             }
         },
         created(){
-            this.initData();
+            // this.initData();
+            this.getSingerList()
         },
     	components: {
     		headTop,

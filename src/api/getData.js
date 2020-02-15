@@ -19,7 +19,8 @@ export const signout = () => fetch('/nodeApi/users/signout');
 export const getUserList = () => fetch('/nodeApi/users/userList');
 
 // 获取歌手列表
-export const getSingerList = () => fetch('https://c.y.qq.com/v8/fcg-bin/v8.fcg?g_tk=1928093487&inCharset=utf-8&outCharset=utf-8&notice=0&format=jsonp&channel=singer&page=list&key=all_all_all&pagesize=100&pagenum=1&hostUin=0&needNewCode=0&platform=yqq')
+// export const getSingerList = () => fetch('https://c.y.qq.com/v8/fcg-bin/v8.fcg?g_tk=1928093487&inCharset=utf-8&outCharset=utf-8&notice=0&format=jsonp&channel=singer&page=list&key=all_all_all&pagesize=100&pagenum=1&hostUin=0&needNewCode=0&platform=yqq')
+export const getSingerList = () => fetch('/nodeApi/singers/singerList')
 /**
  * 获取用户信息
  */
