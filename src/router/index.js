@@ -13,10 +13,21 @@ const addUser = r => require.ensure([], () => r(require('@/page/addUser')), 'add
 const addSinger = r => require.ensure([], () => r(require('@/page/addSinger')), 'addSinger');
 const addSong = r => require.ensure([], () => r(require('@/page/addSong')), 'addSong');
 
+const sign = r => require.ensure([], () => r(require('@/page/sign')), 'sign');
+const show = r => require.ensure([], () => r(require('@/page/show')), 'show');
+
 const routes = [
 	{
 		path: '/',
 		component: login
+	},
+	{
+		path: '/sign',
+		component: sign
+	},
+	{
+		path: '/show',
+		component: show
 	},
 	{
 		path: '/manage',
