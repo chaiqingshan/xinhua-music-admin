@@ -27,7 +27,12 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/nodeApi':{
+        target : 'http://127.0.0.1:3000', //设置你调用的接口域名和端口号.别忘了加http
+        changeOrigin : true, //允许跨域
+      }
+    },
     context: [ 
         '/nodeApi',
         '/shopping',

@@ -1,5 +1,12 @@
 import fetch from '@/config/fetch'
 
+// 签到
+export const signIn = data => fetch('/nodeApi/signer/signIn', data, 'POST');
+// 签退
+export const signOut = data => fetch('/nodeApi/signer/signOut', data, 'POST');
+// 查询签到列表
+export const getSigner = () => fetch('/nodeApi/signer/getSigner');
+
 /**
  * 登陆
  */

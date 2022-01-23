@@ -19,7 +19,7 @@ const show = r => require.ensure([], () => r(require('@/page/show')), 'show');
 const routes = [
 	{
 		path: '/',
-		component: login
+		component: sign
 	},
 	{
 		path: '/sign',

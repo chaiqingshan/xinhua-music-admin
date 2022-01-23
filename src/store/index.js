@@ -8,16 +8,12 @@ Vue.use(Vuex)
 const state = {
 	adminInfo: {
 		avatar: 'default.jpg'
-	},
-	jichu:''
+	}
 }
 
 const mutations = {
 	saveAdminInfo(state, adminInfo){
 		state.adminInfo = adminInfo;
-	},
-	changeJichu(state,name){
-		state.jichu=name;
 	}
 }
 
@@ -33,9 +29,6 @@ const actions = {
 		}catch(err){
 			// console.log(err.message)
 		}
-	},
-	getJichu({commit}){
-		commit('changeJichu',localStorage.getItem('jichu'))
 	}
 }
 
