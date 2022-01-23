@@ -56,7 +56,7 @@ var context = config.dev.context
 
 switch(process.env.NODE_ENV){
     case 'local': var proxypath = 'http://localhost:3000'; break;
-    case 'online': var proxypath = 'https://c.y.qq.com'; break;
+    case 'online': var proxypath = 'http://localhost:3000'; break;
 }
 var options = {
     target: proxypath,

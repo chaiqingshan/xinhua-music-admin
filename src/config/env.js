@@ -14,7 +14,7 @@ if (process.env.NODE_ENV == 'development') {
 	baseUrl = '';
     baseImgPath = '/img/';
 }else{
-	baseUrl= "//c.y.qq.com"
+	baseUrl= ""
 }
 
 export {
